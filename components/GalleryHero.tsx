@@ -21,22 +21,22 @@ export function GalleryHero() {
   const hero = GALLERY_HERO[key];
 
   return (
-    <section className="relative overflow-hidden border-b border-white/[0.06] bg-background">
+    <section className="relative overflow-x-clip overflow-hidden border-b border-white/[0.06] bg-background">
       <div
         key={key}
-        className="gallery-hero-animate relative min-h-[42vh] bg-background md:min-h-[48vh] lg:min-h-[52vh]"
+        className="gallery-hero-animate relative min-h-[min(52vh,26rem)] bg-background sm:min-h-[46vh] md:min-h-[48vh] lg:min-h-[52vh]"
       >
         <Image
           src={hero.src}
           alt=""
           fill
           priority
-          className="object-contain object-center brightness-[0.72] contrast-[1.08] grayscale"
+          className="object-cover object-center brightness-[0.72] contrast-[1.08] grayscale lg:object-contain lg:object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/75 to-background/25 md:via-background/55" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent md:from-background/70" />
-        <div className="relative z-10 mx-auto flex min-h-[38vh] max-w-7xl flex-col justify-end px-4 pb-10 pt-8 text-center md:min-h-[44vh] md:px-6 md:pb-14 md:text-left lg:min-h-[48vh] lg:px-12 lg:pb-16">
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/30 md:via-background/65 lg:via-background/55" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent md:from-background/75 md:via-transparent lg:from-background/70" />
+        <div className="relative z-10 mx-auto flex min-h-[min(48vh,24rem)] max-w-7xl flex-col justify-end px-4 pb-9 pt-10 text-center sm:min-h-[42vh] md:min-h-[44vh] md:px-6 md:pb-14 md:text-left lg:min-h-[48vh] lg:px-12 lg:pb-16">
           <p className="font-label text-[11px] font-bold uppercase tracking-[0.35em] text-primary">
             {hero.kicker}
           </p>

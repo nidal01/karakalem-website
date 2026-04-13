@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <>
       <section
-        className="relative isolate border-b border-white/[0.06] bg-background"
+        className="relative isolate overflow-x-clip border-b border-white/[0.06] bg-background"
         aria-labelledby="hero-heading"
       >
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 pb-10 pt-0 sm:px-6 md:gap-10 md:pb-14 lg:grid-cols-12 lg:items-center lg:gap-12 lg:px-12 lg:pb-16 xl:gap-14">
@@ -76,19 +76,21 @@ export default function HomePage() {
             </dl>
           </div>
 
-          {/* Görsel: mobilde üstte akışta; lg+ sağda sabit oran */}
+          {/* Görsel: mobilde tam genişlik kaplama; lg+ sağda kart */}
           <div className="order-1 w-full lg:order-2 lg:col-span-6 xl:col-span-7">
-            <figure className="relative mx-auto aspect-[5/6] w-full max-w-md overflow-hidden rounded-2xl ring-1 ring-white/[0.08] sm:max-w-lg sm:aspect-[4/5] lg:mx-0 lg:max-w-none lg:aspect-[4/5] lg:max-h-[min(62vh,calc(100svh-var(--navbar-h)-4.5rem))] lg:min-h-[17rem]">
+            <figure
+              className="relative ml-[calc(50%-50vw)] w-screen max-w-[100vw] min-h-[min(52vh,28rem)] overflow-hidden rounded-b-2xl ring-1 ring-white/[0.08] lg:ml-0 lg:aspect-[4/5] lg:min-h-[17rem] lg:w-full lg:max-w-none lg:rounded-2xl lg:max-h-[min(62vh,calc(100svh-var(--navbar-h)-4.5rem))]"
+            >
               <Image
                 src="/images/karakalem/980x2055-web2.jpg"
                 alt="Karakalem portre çalışması"
                 fill
                 priority
                 sizes="(max-width: 1023px) 100vw, 46vw"
-                className="object-cover object-[center_15%] brightness-[0.78] contrast-[1.12] grayscale"
+                className="object-cover object-[center_18%] brightness-[0.78] contrast-[1.12] grayscale"
               />
               <div
-                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background via-background/25 to-transparent lg:bg-gradient-to-l lg:from-background lg:via-background/20 lg:to-transparent"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background via-background/35 to-background/5 lg:bg-gradient-to-l lg:from-background lg:via-background/20 lg:to-transparent"
                 aria-hidden
               />
             </figure>

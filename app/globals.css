@@ -84,8 +84,8 @@ html {
 .logo-image {
   display: block;
   width: auto;
-  height: 3.5rem;
-  max-width: min(72vw, 14rem);
+  height: 4rem;
+  max-width: min(78vw, 15rem);
   aspect-ratio: 260 / 200;
   object-fit: contain;
   object-position: left center;
@@ -93,7 +93,7 @@ html {
 
 @media (min-width: 768px) {
   .logo-image {
-    height: 4rem;
+    height: 4.125rem;
     max-width: 15rem;
   }
 }

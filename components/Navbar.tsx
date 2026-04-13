@@ -34,7 +34,7 @@ export function Navbar() {
               height={SITE_LOGO_HEIGHT}
               priority
               className="logo-image"
-              sizes="(max-width: 768px) 72vw, 16rem"
+              sizes="(max-width: 768px) 78vw, 16rem"
             />
           </Link>
           <div
