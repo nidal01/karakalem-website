@@ -20,7 +20,7 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 z-50 w-full border-b border-white/[0.06] bg-[#0e0e0d]/75 backdrop-blur-xl">
+      <nav className="fixed top-0 z-50 w-full border-b border-white/[0.06] bg-[#0e0e0d]/75 pt-[env(safe-area-inset-top,0px)] backdrop-blur-xl">
         <div className="relative mx-auto flex h-[6rem] max-w-7xl items-center gap-3 px-6 lg:h-[6.75rem] lg:gap-4 lg:px-12">
           <Link
             href="/"
@@ -78,7 +78,7 @@ export function Navbar() {
       </nav>
       <div
         id="mobile-menu"
-        className={`fixed inset-x-0 top-[6rem] z-40 border-t border-white/5 bg-[#0e0e0d]/98 px-6 py-6 backdrop-blur-xl transition md:hidden lg:top-[6.75rem] ${
+        className={`fixed inset-x-0 top-[var(--navbar-h)] z-40 border-t border-white/5 bg-[#0e0e0d]/98 px-6 py-6 backdrop-blur-xl transition md:hidden ${
           open ? "block" : "hidden"
         }`}
       >

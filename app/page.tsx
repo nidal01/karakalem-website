@@ -7,50 +7,47 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <>
-      <section className="relative flex max-h-[80vh] min-h-0 flex-col overflow-hidden pt-4 md:pt-6">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 z-10 bg-gradient-to-r from-background via-background/65 to-background/20 md:via-background/50" />
-          <div className="absolute inset-0 z-[5] bg-gradient-to-t from-background via-transparent to-transparent md:hidden" />
-          <Image
-            className="absolute right-0 top-0 h-[55%] w-full object-cover object-top brightness-[0.72] contrast-[1.15] grayscale md:h-full md:w-3/5 lg:w-1/2"
-            src="/images/karakalem/980x2055-web2.jpg"
-            alt=""
-            width={1200}
-            height={1600}
-            priority
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        </div>
-        <div className="relative z-20 mx-auto flex min-h-0 w-full max-w-7xl flex-1 flex-col justify-end gap-6 px-6 pb-8 pt-6 md:justify-center md:gap-8 md:pb-12 md:pt-8 lg:px-12 lg:pb-14">
-          <div className="max-w-3xl">
-            <p className="mb-4 font-label text-[11px] font-bold uppercase tracking-[0.35em] text-primary">
+      <section
+        className="relative isolate border-b border-white/[0.06] bg-background"
+        aria-labelledby="hero-heading"
+      >
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 pb-10 pt-0 md:gap-10 md:pb-14 lg:grid-cols-12 lg:items-center lg:gap-12 lg:px-12 lg:pb-16 xl:gap-14">
+          {/* Metin: mobilde görselin altında; lg+ solda */}
+          <div className="order-2 flex flex-col justify-center lg:order-1 lg:col-span-6 xl:col-span-5">
+            <p className="font-label text-[11px] font-bold uppercase tracking-[0.35em] text-primary">
               Portre atölyesi
             </p>
-            <h1 className="font-display max-w-[18ch] text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1
+              id="hero-heading"
+              className="font-display mt-3 max-w-[16ch] text-[clamp(2.15rem,5.2vw,3.85rem)] leading-[1.03] sm:max-w-[18ch] md:text-6xl lg:text-[3.5rem] xl:text-[4.25rem]"
+            >
               Fotoğrafınız <span className="font-display-italic text-primary">sanata</span> dönüşsün.
             </h1>
-            <p className="font-lead mt-8 max-w-xl text-balance">
+            <p className="font-lead mt-5 max-w-xl text-pretty md:mt-6">
               Dört çizim tekniğiyle — karakalem, kuru fırçalama, kuru pastel, yağlı boya — yüzlerinizi ve
               anılarınızı duvarlara taşıyoruz. Net çizgi, güçlü kontrast, sessiz lüks.
             </p>
-            <div className="mt-10 flex flex-col gap-4">
-              <div className="flex flex-wrap items-center gap-3">
+            <div className="mt-6 flex flex-col gap-3 sm:mt-8">
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <WhatsAppButton
                   message="Merhaba, portre siparişi hakkında bilgi almak istiyorum."
-                  className="min-h-[52px] min-w-[200px] justify-center px-8"
+                  className="min-h-[52px] w-full justify-center px-8 sm:w-auto sm:min-w-[200px]"
                 />
-                <PhoneButton variant="outline" className="min-h-[52px] min-w-[200px] justify-center" />
+                <PhoneButton
+                  variant="outline"
+                  className="min-h-[52px] w-full justify-center sm:w-auto sm:min-w-[200px]"
+                />
               </div>
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6">
                 <Link
                   href="/galeri"
-                  className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3.5 font-label text-sm font-bold tracking-[0.12em] text-on-primary transition hover:bg-primary-dim"
+                  className="inline-flex min-h-[48px] items-center justify-center rounded-md bg-primary px-8 py-3.5 font-label text-sm font-bold tracking-[0.12em] text-on-primary transition hover:bg-primary-dim"
                 >
                   GALERİYİ İNCELE
                 </Link>
                 <Link
                   href="/surec"
-                  className="group inline-flex items-center gap-2 font-label text-sm font-semibold tracking-wide text-on-surface"
+                  className="group inline-flex min-h-[48px] items-center gap-2 font-label text-sm font-semibold tracking-wide text-on-surface/90 transition hover:text-on-surface"
                 >
                   Sipariş süreci
                   <span className="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">
@@ -59,31 +56,42 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
+            <dl className="mt-8 grid grid-cols-2 gap-x-4 gap-y-5 border-t border-white/[0.08] pt-8 sm:grid-cols-4 sm:gap-x-6">
+              {[
+                ["4", "Teknik"],
+                ["Özel", "Sipariş"],
+                ["TR", "Teslimat"],
+                ["99%", "Memnuniyet"],
+              ].map(([value, label]) => (
+                <div key={label}>
+                  <dt className="sr-only">{label}</dt>
+                  <dd className="font-label text-xl font-bold tabular-nums leading-none text-[#f2f0eb] sm:text-2xl md:text-3xl">
+                    {value}
+                  </dd>
+                  <p className="mt-2 font-label text-[10px] font-semibold uppercase tracking-wider text-on-surface-variant sm:text-[11px]">
+                    {label}
+                  </p>
+                </div>
+              ))}
+            </dl>
           </div>
-          <div className="grid grid-cols-2 gap-x-3 gap-y-4 border-t border-white/[0.07] pt-6 md:grid-cols-4 md:gap-x-6 md:gap-y-5 md:pt-8">
-            {[
-              ["4", "Teknik"],
-              ["Özel", "Sipariş"],
-              ["TR", "Teslimat"],
-              ["99%", "Memnuniyet"],
-            ].map(([a, b]) => (
-              <div key={b}>
-                <p className="font-label text-2xl font-bold tabular-nums leading-tight text-[#f2f0eb] sm:text-3xl md:text-4xl">
-                  {a}
-                </p>
-                <p className="mt-1 font-label text-[11px] font-semibold uppercase tracking-wider text-on-surface-variant sm:text-xs">
-                  {b}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 flex flex-wrap items-center gap-3 border-t border-white/[0.07] pt-8 md:mt-10 md:pt-10">
-            <WhatsAppButton
-              variant="outline"
-              message="Merhaba, Karakalem portre atölyesi hakkında bilgi almak istiyorum."
-              className="min-h-[48px] justify-center px-6"
-            />
-            <PhoneButton variant="compact" className="min-h-[48px] justify-center px-6" />
+
+          {/* Görsel: mobilde üstte akışta; lg+ sağda sabit oran */}
+          <div className="order-1 lg:order-2 lg:col-span-6 xl:col-span-7">
+            <figure className="relative mx-auto aspect-[5/6] w-full max-w-lg overflow-hidden rounded-2xl ring-1 ring-white/[0.08] sm:aspect-[4/5] sm:max-w-none lg:mx-0 lg:aspect-[4/5] lg:max-h-[min(62vh,calc(100svh-var(--navbar-h)-4.5rem))] lg:min-h-[17rem]">
+              <Image
+                src="/images/karakalem/980x2055-web2.jpg"
+                alt="Karakalem portre çalışması"
+                fill
+                priority
+                sizes="(max-width: 1023px) 100vw, 46vw"
+                className="object-cover object-[center_15%] brightness-[0.78] contrast-[1.12] grayscale"
+              />
+              <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background via-background/25 to-transparent lg:bg-gradient-to-l lg:from-background lg:via-background/20 lg:to-transparent"
+                aria-hidden
+              />
+            </figure>
           </div>
         </div>
       </section>
