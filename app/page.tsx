@@ -11,43 +11,43 @@ export default function HomePage() {
         className="relative isolate border-b border-white/[0.06] bg-background"
         aria-labelledby="hero-heading"
       >
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 pb-10 pt-0 md:gap-10 md:pb-14 lg:grid-cols-12 lg:items-center lg:gap-12 lg:px-12 lg:pb-16 xl:gap-14">
-          {/* Metin: mobilde görselin altında; lg+ solda */}
-          <div className="order-2 flex flex-col justify-center lg:order-1 lg:col-span-6 xl:col-span-5">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 pb-10 pt-0 sm:px-6 md:gap-10 md:pb-14 lg:grid-cols-12 lg:items-center lg:gap-12 lg:px-12 lg:pb-16 xl:gap-14">
+          {/* Metin: mobilde görselin altında; küçük ekranda ortalanır, lg+ solda */}
+          <div className="order-2 flex flex-col items-center justify-center text-center lg:order-1 lg:col-span-6 lg:items-start lg:text-left xl:col-span-5">
             <p className="font-label text-[11px] font-bold uppercase tracking-[0.35em] text-primary">
               Portre atölyesi
             </p>
             <h1
               id="hero-heading"
-              className="font-display mt-3 max-w-[16ch] text-[clamp(2.15rem,5.2vw,3.85rem)] leading-[1.03] sm:max-w-[18ch] md:text-6xl lg:text-[3.5rem] xl:text-[4.25rem]"
+              className="font-display mx-auto mt-3 max-w-[16ch] text-[clamp(2.15rem,5.2vw,3.85rem)] leading-[1.03] sm:max-w-[18ch] md:text-6xl lg:mx-0 lg:text-[3.5rem] xl:text-[4.25rem]"
             >
               Fotoğrafınız <span className="font-display-italic text-primary">sanata</span> dönüşsün.
             </h1>
-            <p className="font-lead mt-5 max-w-xl text-pretty md:mt-6">
+            <p className="font-lead mx-auto mt-5 max-w-xl text-pretty md:mt-6 lg:mx-0">
               Dört çizim tekniğiyle — karakalem, kuru fırçalama, kuru pastel, yağlı boya — yüzlerinizi ve
               anılarınızı duvarlara taşıyoruz. Net çizgi, güçlü kontrast, sessiz lüks.
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:mt-8">
-              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <div className="mt-6 flex w-full max-w-md flex-col gap-3 sm:mt-8 lg:max-w-none">
+              <div className="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
                 <WhatsAppButton
                   message="Merhaba, portre siparişi hakkında bilgi almak istiyorum."
-                  className="min-h-[52px] w-full justify-center px-8 sm:w-auto sm:min-w-[200px]"
+                  className="min-h-[52px] w-full max-w-sm justify-center px-8 sm:w-auto sm:min-w-[200px] sm:max-w-none"
                 />
                 <PhoneButton
                   variant="outline"
-                  className="min-h-[52px] w-full justify-center sm:w-auto sm:min-w-[200px]"
+                  className="min-h-[52px] w-full max-w-sm justify-center sm:w-auto sm:min-w-[200px] sm:max-w-none"
                 />
               </div>
-              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6">
+              <div className="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-6 lg:justify-start">
                 <Link
                   href="/galeri"
-                  className="inline-flex min-h-[48px] items-center justify-center rounded-md bg-primary px-8 py-3.5 font-label text-sm font-bold tracking-[0.12em] text-on-primary transition hover:bg-primary-dim"
+                  className="inline-flex min-h-[48px] w-full max-w-sm items-center justify-center rounded-md bg-primary px-8 py-3.5 font-label text-sm font-bold tracking-[0.12em] text-on-primary transition hover:bg-primary-dim sm:w-auto sm:max-w-none"
                 >
                   GALERİYİ İNCELE
                 </Link>
                 <Link
                   href="/surec"
-                  className="group inline-flex min-h-[48px] items-center gap-2 font-label text-sm font-semibold tracking-wide text-on-surface/90 transition hover:text-on-surface"
+                  className="group inline-flex min-h-[48px] items-center justify-center gap-2 font-label text-sm font-semibold tracking-wide text-on-surface/90 transition hover:text-on-surface"
                 >
                   Sipariş süreci
                   <span className="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">
@@ -56,7 +56,7 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <dl className="mt-8 grid grid-cols-2 gap-x-4 gap-y-5 border-t border-white/[0.08] pt-8 sm:grid-cols-4 sm:gap-x-6">
+            <dl className="mt-8 grid w-full max-w-lg grid-cols-2 justify-items-center gap-x-4 gap-y-5 border-t border-white/[0.08] pt-8 sm:grid-cols-4 sm:gap-x-6 lg:max-w-none lg:justify-items-start">
               {[
                 ["4", "Teknik"],
                 ["Özel", "Sipariş"],
@@ -77,8 +77,8 @@ export default function HomePage() {
           </div>
 
           {/* Görsel: mobilde üstte akışta; lg+ sağda sabit oran */}
-          <div className="order-1 lg:order-2 lg:col-span-6 xl:col-span-7">
-            <figure className="relative mx-auto aspect-[5/6] w-full max-w-lg overflow-hidden rounded-2xl ring-1 ring-white/[0.08] sm:aspect-[4/5] sm:max-w-none lg:mx-0 lg:aspect-[4/5] lg:max-h-[min(62vh,calc(100svh-var(--navbar-h)-4.5rem))] lg:min-h-[17rem]">
+          <div className="order-1 w-full lg:order-2 lg:col-span-6 xl:col-span-7">
+            <figure className="relative mx-auto aspect-[5/6] w-full max-w-md overflow-hidden rounded-2xl ring-1 ring-white/[0.08] sm:max-w-lg sm:aspect-[4/5] lg:mx-0 lg:max-w-none lg:aspect-[4/5] lg:max-h-[min(62vh,calc(100svh-var(--navbar-h)-4.5rem))] lg:min-h-[17rem]">
               <Image
                 src="/images/karakalem/980x2055-web2.jpg"
                 alt="Karakalem portre çalışması"
@@ -102,16 +102,16 @@ export default function HomePage() {
         message="Merhaba, portre fiyatı ve süreç hakkında bilgi istiyorum."
       />
 
-      <section className="border-t border-white/[0.06] bg-surface py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="grid gap-12 lg:grid-cols-12 lg:items-end lg:gap-16">
-            <div className="lg:col-span-5">
-              <h2 className="font-section-title text-4xl md:text-5xl">
+      <section className="border-t border-white/[0.06] bg-surface py-16 md:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+          <div className="grid gap-10 text-center lg:grid-cols-12 lg:items-end lg:gap-16 lg:text-left">
+            <div className="mx-auto max-w-2xl lg:col-span-5 lg:mx-0">
+              <h2 className="font-section-title text-3xl sm:text-4xl md:text-5xl">
                 Dört teknik,
                 <br />
                 tek standart.
               </h2>
-              <p className="font-body-strong mt-6 text-lg">
+              <p className="font-body-strong mt-5 text-base sm:mt-6 sm:text-lg">
                 Her teknik farklı doku ve atmosfer sunar. Galeride sekmelerle filtreleyerek örnekleri
                 inceleyebilirsiniz.
               </p>
@@ -130,7 +130,7 @@ export default function HomePage() {
                 <Link
                   key={href}
                   href={href}
-                  className="group rounded-xl bg-surface-container-low p-6 ring-1 ring-outline-variant/15 transition hover:ring-outline-variant/35"
+                  className="group rounded-xl bg-surface-container-low p-5 text-center ring-1 ring-outline-variant/15 transition hover:ring-outline-variant/35 sm:p-6 sm:text-left"
                 >
                   <h3 className="font-section-title text-xl">{t}</h3>
                   <p className="mt-2 font-body text-sm font-medium text-on-surface-variant">{d}</p>
@@ -144,23 +144,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-surface-container-low py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="mb-12 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end">
-            <div>
+      <section className="bg-surface-container-low py-16 md:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+          <div className="mb-10 flex flex-col items-center justify-between gap-5 text-center md:mb-16 md:flex-row md:items-end md:text-left">
+            <div className="max-w-2xl">
               <p className="font-label text-[11px] font-bold uppercase tracking-[0.35em] text-primary">
                 Seçkin örnekler
               </p>
-              <h2 className="font-section-title mt-3 text-4xl md:text-5xl">Koleksiyondan</h2>
+              <h2 className="font-section-title mt-3 text-3xl sm:text-4xl md:text-5xl">Koleksiyondan</h2>
             </div>
             <Link
               href="/galeri"
-              className="font-label text-sm font-bold uppercase tracking-wider text-primary hover:text-primary-fixed-dim"
+              className="shrink-0 font-label text-sm font-bold uppercase tracking-wider text-primary hover:text-primary-fixed-dim"
             >
               Tüm galeri →
             </Link>
           </div>
-          <div className="grid min-h-[720px] grid-cols-1 gap-5 md:grid-cols-12 md:grid-rows-2 md:gap-6 lg:min-h-[820px]">
+          <div className="grid grid-cols-1 gap-4 sm:gap-5 md:min-h-[720px] md:grid-cols-12 md:grid-rows-2 md:gap-6 lg:min-h-[820px]">
             <Link
               href="/galeri?teknik=karakalem"
               className="group relative block min-h-[240px] overflow-hidden rounded-xl bg-surface-container-high md:col-span-8 md:row-span-1"
@@ -173,7 +173,7 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 66vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
-              <span className="absolute bottom-6 left-6 font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-fixed-dim">
+              <span className="absolute inset-x-4 bottom-5 text-center font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-fixed-dim md:inset-x-auto md:bottom-6 md:left-6 md:text-left">
                 Karakalem
               </span>
             </Link>
@@ -189,7 +189,7 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
-              <span className="absolute bottom-6 left-6 font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-fixed-dim">
+              <span className="absolute inset-x-4 bottom-5 text-center font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-fixed-dim md:inset-x-auto md:bottom-6 md:left-6 md:text-left">
                 Kuru fırçalama
               </span>
             </Link>
@@ -205,7 +205,7 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
-              <span className="absolute bottom-6 left-6 font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-fixed-dim">
+              <span className="absolute inset-x-4 bottom-5 text-center font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-fixed-dim md:inset-x-auto md:bottom-6 md:left-6 md:text-left">
                 Kuru pastel
               </span>
             </Link>
@@ -221,7 +221,7 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 66vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
-              <span className="absolute bottom-6 left-6 font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-fixed-dim">
+              <span className="absolute inset-x-4 bottom-5 text-center font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-fixed-dim md:inset-x-auto md:bottom-6 md:left-6 md:text-left">
                 Yağlı boya
               </span>
             </Link>
@@ -229,19 +229,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-t border-white/[0.06] bg-background py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
-            <div>
-              <h2 className="font-section-title text-4xl leading-[1.1] md:text-5xl">
+      <section className="border-t border-white/[0.06] bg-background py-16 md:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+          <div className="grid gap-10 text-center lg:grid-cols-2 lg:gap-20 lg:text-left">
+            <div className="mx-auto max-w-2xl lg:mx-0">
+              <h2 className="font-section-title text-3xl leading-[1.12] sm:text-4xl md:text-5xl">
                 “Çizgi sessizdir; <span className="font-display-italic text-primary">duyguyu</span> en yüksek seste
                 anlatır.”
               </h2>
-              <p className="font-body-strong mt-8 text-lg">
+              <p className="font-body-strong mt-6 text-base sm:mt-8 sm:text-lg">
                 Her siparişte ölçü, teknik ve teslim netleşir. Şeffaf süreç, güçlü iletişim.
               </p>
             </div>
-            <div className="flex flex-col justify-center gap-4">
+            <div className="mx-auto flex w-full max-w-md flex-col justify-center gap-3 sm:gap-4 lg:mx-0 lg:max-w-none">
               <WhatsAppButton
                 message="Merhaba, portre siparişi için teklif almak istiyorum."
                 fullWidth

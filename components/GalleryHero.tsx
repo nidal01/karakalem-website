@@ -36,20 +36,20 @@ export function GalleryHero() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/75 to-background/25 md:via-background/55" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent md:from-background/70" />
-        <div className="relative z-10 mx-auto flex min-h-[38vh] max-w-7xl flex-col justify-end px-6 pb-10 pt-8 md:min-h-[44vh] md:pb-14 lg:min-h-[48vh] lg:px-12 lg:pb-16">
+        <div className="relative z-10 mx-auto flex min-h-[38vh] max-w-7xl flex-col justify-end px-4 pb-10 pt-8 text-center md:min-h-[44vh] md:px-6 md:pb-14 md:text-left lg:min-h-[48vh] lg:px-12 lg:pb-16">
           <p className="font-label text-[11px] font-bold uppercase tracking-[0.35em] text-primary">
             {hero.kicker}
           </p>
-          <h1 className="font-section-title mt-3 max-w-2xl text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="font-section-title mx-auto mt-3 max-w-2xl text-3xl sm:text-4xl md:mx-0 md:text-5xl lg:text-6xl">
             {hero.title}
           </h1>
-          <p className="font-body-strong mt-4 max-w-xl text-base md:text-lg">{hero.subtitle}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <p className="font-body-strong mx-auto mt-4 max-w-xl text-base md:mx-0 md:text-lg">{hero.subtitle}</p>
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap md:justify-start">
             <WhatsAppButton
               message="Merhaba, galerideki çalışmalar için sipariş ve fiyat bilgisi almak istiyorum."
-              className="min-h-[48px] justify-center"
+              className="min-h-[48px] w-full max-w-xs justify-center sm:w-auto sm:max-w-none"
             />
-            <PhoneButton variant="outline" className="min-h-[48px] justify-center" />
+            <PhoneButton variant="outline" className="min-h-[48px] w-full max-w-xs justify-center sm:w-auto sm:max-w-none" />
           </div>
         </div>
       </div>

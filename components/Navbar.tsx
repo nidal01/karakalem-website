@@ -82,14 +82,14 @@ export function Navbar() {
           open ? "block" : "hidden"
         }`}
       >
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 text-center">
           {SITE_NAV_LINKS.map(({ href, label }) => {
             const active = isActive(pathname, href);
             return (
               <Link
                 key={href}
                 href={href}
-                className={`rounded-lg px-3 py-3 font-label text-[19px] font-semibold leading-snug ${
+                className={`block rounded-lg px-3 py-3 font-label text-[19px] font-semibold leading-snug ${
                   active ? "text-on-surface" : "text-on-surface/70"
                 }`}
                 onClick={() => setOpen(false)}
@@ -98,7 +98,7 @@ export function Navbar() {
               </Link>
             );
           })}
-          <div className="mt-4 flex flex-col gap-2">
+          <div className="mt-4 flex flex-col items-center gap-2">
             <WhatsAppButton
               variant="primary"
               fullWidth
