@@ -31,11 +31,11 @@ export function GalleryHero() {
           alt=""
           fill
           priority
-          className="object-cover object-center brightness-[0.72] contrast-[1.08] grayscale lg:object-contain lg:object-center"
+          className="object-cover object-center brightness-[0.9] contrast-[1.04] grayscale-[0.35] lg:object-contain lg:object-center lg:brightness-[0.82] lg:contrast-[1.06] lg:grayscale"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/30 md:via-background/65 lg:via-background/55" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent md:from-background/75 md:via-transparent lg:from-background/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/45 to-transparent md:via-background/38 lg:via-background/32" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/55 via-background/10 to-transparent md:from-background/50 md:via-transparent lg:from-background/48" />
         <div className="relative z-10 mx-auto flex min-h-[min(48vh,24rem)] max-w-7xl flex-col justify-end px-4 pb-9 pt-10 text-center sm:min-h-[42vh] md:min-h-[44vh] md:px-6 md:pb-14 md:text-left lg:min-h-[48vh] lg:px-12 lg:pb-16">
           <p className="font-label text-[11px] font-bold uppercase tracking-[0.35em] text-primary">
             {hero.kicker}
