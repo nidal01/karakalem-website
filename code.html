@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#1f201e",
+                    "primary-fixed-dim": "#d4d5cf",
+                    "primary-dim": "#b8b9b4",
+                    "error": "#ed7f64",
+                    "outline-variant": "#484845",
+                    "outline": "#767572",
+                    "secondary-fixed-dim": "#d6d4d0",
+                    "secondary-fixed": "#e4e2de",
+                    "on-surface": "#e7e5e1",
+                    "on-tertiary-fixed-variant": "#516c58",
+                    "tertiary-fixed-dim": "#ceedd4",
+                    "tertiary-fixed": "#ddfbe1",
+                    "background": "#0e0e0d",
+                    "on-tertiary": "#4a6551",
+                    "surface-container-lowest": "#000000",
+                    "on-primary": "#3e413d",
+                    "inverse-primary": "#5d605b",
+                    "on-primary-fixed-variant": "#5a5c58",
+                    "primary-container": "#454743",
+                    "surface-variant": "#252623",
+                    "error-container": "#7e2b17",
+                    "on-secondary-container": "#c0bfbb",
+                    "on-background": "#e7e5e1",
+                    "on-error": "#450900",
+                    "on-tertiary-fixed": "#354f3d",
+                    "on-primary-container": "#d0d1cb",
+                    "on-error-container": "#ff9b82",
+                    "on-secondary-fixed": "#3f3f3d",
+                    "tertiary-dim": "#d1f0d6",
+                    "surface-bright": "#2c2c29",
+                    "tertiary-container": "#d4f3d9",
+                    "on-tertiary-container": "#425d49",
+                    "surface-container-highest": "#252623",
+                    "on-secondary-fixed-variant": "#5c5c59",
+                    "surface-tint": "#c6c7c1",
+                    "on-surface-variant": "#acaba7",
+                    "error-dim": "#ba573f",
+                    "inverse-surface": "#fcf9f6",
+                    "inverse-on-surface": "#565553",
+                    "surface-container": "#191a18",
+                    "surface": "#0e0e0d",
+                    "primary-fixed": "#e2e3dd",
+                    "secondary": "#9f9e9a",
+                    "surface-container-low": "#131312",
+                    "tertiary": "#e9ffeb",
+                    "on-secondary": "#20201e",
+                    "secondary-container": "#3b3c39",
+                    "secondary-dim": "#9f9e9a",
+                    "surface-dim": "#0e0e0d",
+                    "primary": "#c6c7c1",
+                    "on-primary-fixed": "#3e403c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Newsreader"],
+                    "label": ["Work Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-transition-to-transparent {
+            background: linear-gradient(to bottom, rgba(14, 14, 13, 0.9) 0%, rgba(14, 14, 13, 0) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- Header Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0d]/60 backdrop-blur-xl flex justify-between items-center px-12 py-6 w-full">
+<div class="font-['Newsreader'] italic text-2xl text-[#e7e5e1]">Obsidian Gallery</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Newsreader'] tracking-tight text-lg text-[#e7e5e1] border-b border-[#c6c7c1]/30 pb-1 hover:text-[#e7e5e1] transition-colors duration-300" href="#">Gallery</a>
+<a class="font-['Newsreader'] tracking-tight text-lg text-[#e7e5e1]/60 hover:text-[#e7e5e1] transition-colors duration-300" href="#">Videos</a>
+<a class="font-['Newsreader'] tracking-tight text-lg text-[#e7e5e1]/60 hover:text-[#e7e5e1] transition-colors duration-300" href="#">Reviews</a>
+<a class="font-['Newsreader'] tracking-tight text-lg text-[#e7e5e1]/60 hover:text-[#e7e5e1] transition-colors duration-300" href="#">FAQ</a>
+<a class="font-['Newsreader'] tracking-tight text-lg text-[#e7e5e1]/60 hover:text-[#e7e5e1] transition-colors duration-300" href="#">About</a>
+<a class="font-['Newsreader'] tracking-tight text-lg text-[#e7e5e1]/60 hover:text-[#e7e5e1] transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="bg-primary hover:bg-primary-dim text-on-primary font-label text-sm px-6 py-2.5 rounded transition-all duration-300 scale-95 hover:scale-100">
+            Order Now
+        </button>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent z-10"></div>
+<img class="absolute right-0 top-0 h-full w-3/4 object-cover object-center grayscale contrast-125 brightness-75" data-alt="Stunning hyper-realistic graphite portrait of an elderly man with deep expressive wrinkles in a dramatic side-lit studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjKTerc5P7RPKfzbG9l98st5i2SsZfWwRaaORmAohJu9feljihF5wZ5q-FFwxg6FnVV9th5BvQim8HgeBgu_pZyBnmulswVFcogT0eUH3puae1L64eQSE5abWM6AdLLFMZWWEnA1qyGWbrzbNADTCkqJ7wH91Ba6VXyQ1Ai4Cfzd2g6MF2nXLc4Ed7rx_0sEtnS_rwcTi9WUhDg_6B8nEEkZmZMX0iPaUQEfU1kIqSfJFS038ImT6w75oukioV3fNLxcsvF5DJEg"/>
+</div>
+<div class="container mx-auto px-12 relative z-20">
+<div class="max-w-2xl">
+<span class="font-label text-primary-fixed-dim text-xs tracking-[0.4em] uppercase mb-6 block">Atelier Nocturne</span>
+<h1 class="text-6xl md:text-8xl font-headline font-extralight text-on-surface leading-tight mb-8">
+                        Bir fotoğraf, bir hatıra... <br/>
+<span class="italic font-light text-primary">Bir sanat eserine dönüşsün.</span>
+</h1>
+<p class="text-xl text-on-surface-variant font-body leading-relaxed max-w-lg mb-12">
+                        Karakalem sanatının derinliğiyle ruh katılan portreler. Işık ve gölgenin dansı, en değerli anlarınızı ölümsüzleştiriyor.
+                    </p>
+<div class="flex items-center gap-8">
+<button class="bg-primary text-on-primary font-label px-10 py-4 rounded-md text-sm tracking-widest hover:bg-primary-dim transition-all">
+                            KEŞFEDİN
+                        </button>
+<button class="text-on-surface font-label text-sm tracking-widest flex items-center gap-3 group">
+                            SÜRECİMİZ 
+                            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Bento Grid -->
+<section class="py-32 bg-surface">
+<div class="container mx-auto px-12">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<h2 class="text-4xl font-headline text-on-surface mb-6">Seçkin Koleksiyon</h2>
+<p class="text-on-surface-variant leading-relaxed">Grafitin en saf haliyle işlenen, doku ve duygu odaklı çalışmalarımızdan örnekler.</p>
+</div>
+<a class="font-label text-sm border-b border-outline-variant pb-2 hover:border-primary transition-colors" href="#">TÜMÜNÜ GÖR</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-[1000px]">
+<div class="md:col-span-8 bg-surface-container-low rounded-lg overflow-hidden group relative">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="Macro close-up of a charcoal drawing showing rich graphite textures and fine line work of an eye" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvB0wbeJOArE8MkMmbwGcpq2-Rd10Cllb90Tfk81h0Q282c4Idkz9VcFSjNh-IJMReRiN1tiFtyZbIVyJb04rcWZQ_F1ISGUIlftgo9fF89tu0OPPM8zwMz9w1WMeY-FrU18C0gNc_FWuIpHVJF2W66_wYqClmGVxCLjrYhedBTAXACRlwfNdZvaCNRHxUyWEJDFb17QyYTFFVkBpcx0V73VnmFGJKAHcbS6WSd5s9IX-YyRqj3b0fkDOZjULXq1aDZdN9qZ-9bg"/>
+<div class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-background/80 to-transparent">
+<span class="font-label text-xs text-primary-fixed-dim">PORTRE SERİSİ 01</span>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container-low rounded-lg overflow-hidden group relative">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="Dramatic high contrast charcoal portrait of a child with soft lighting and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4t8ZkKCqsm_c4pNk9sZEOocLLV4mNUELYB4Gp3gVZTkfNrSVRHCFxCg9ZN7BMe8jhIEcBxiDj8QFjM5oQOf1RjKtYR2WIstbmg_E6iv3SyPMHmIqF8Izhf-ZZW0NW3A60NsVwsnWNGCRjFkR6_KI1XDVWaiTe9ypXaWda5tHyseKqZvqx-Ljk-lpjnoBhItPwYxZSCHJyU4jz7DsW05FWrnXpYHbzQd4VYbQg9nZI3QFei9-EPnz8p2XEevo3H8Wh0PEstDgDZQ"/>
+<div class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-background/80 to-transparent">
+<span class="font-label text-xs text-primary-fixed-dim">DUYGU ANALİZİ</span>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container-low rounded-lg overflow-hidden group relative">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="Artistic charcoal sketch of hands intertwined, showing detailed skin folds and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkazl4sku7wvTvG4RcrVbhjbxx_3PLgj65mhLyXGGylcfCI36-iAIKjmPQ5KBEEvzQmMyO_UH4bgTdQCIM1Z84aMJytQEZATVqokMGJV3088K_RNkahT6qA-HxxbS27I75si3H8Ug3ASVMbvmTNsshpnQQPpgcDOKwWOZxQOqb_cX54eU1WKSikFKFL0I4F5tnBculid0mEJk7iaopmLmCpa7xCYfMiU4w-h3xtAQsuWlKTsUp-C7YFaBUHAmslxtpbhBnNmMy4A"/>
+<div class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-background/80 to-transparent">
+<span class="font-label text-xs text-primary-fixed-dim">DETAY ÇALIŞMASI</span>
+</div>
+</div>
+<div class="md:col-span-8 bg-surface-container-low rounded-lg overflow-hidden group relative">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="Wide angle shot of a dark art studio with several large charcoal portraits leaning against graphite walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBevLbDkRKAiALnGWGLYrXgYhvWGG4x5ObyR-_EpFO39DyH1-ej_VKHlVvyJouGzqZ4xH6iP4upPPQqkbkKyt0cIcqsnyYYJj248HRFlBWXi9gW153vfgRf42BW8UkLHNZNWSLiuoTJ2i1YFawva756VdCZFG8QzkStPSdCx25hyb0f2ZxoYt2j7KWJR1Imlq6mRxD9zZlgYZSJlqAfYeIPxaE7dB1LxNvSoxIxVTYcpbWjJkOTi00vMdNsSZkcLWoYTyD0wc68TQ"/>
+<div class="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Four Steps Guide -->
+<section class="py-32 bg-surface-container-low">
+<div class="container mx-auto px-12">
+<div class="text-center mb-24">
+<h2 class="text-4xl font-headline mb-4">Sanata Giden Dört Adım</h2>
+<div class="w-16 h-px bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="text-center">
+<div class="w-16 h-16 rounded-full border border-outline-variant flex items-center justify-center mx-auto mb-8 text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">photo_camera</span>
+</div>
+<h3 class="font-headline text-xl mb-4">Fotoğraf Seçimi</h3>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed">En sevdiğiniz, yüksek çözünürlüklü fotoğrafınızı bizimle paylaşın.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 rounded-full border border-outline-variant flex items-center justify-center mx-auto mb-8 text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">edit_square</span>
+</div>
+<h3 class="font-headline text-xl mb-4">Eskiz &amp; Onay</h3>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed">Kompozisyon ve detaylar için ilk taslağı birlikte değerlendirelim.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 rounded-full border border-outline-variant flex items-center justify-center mx-auto mb-8 text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">brush</span>
+</div>
+<h3 class="font-headline text-xl mb-4">Sanatçının Dokunuşu</h3>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed">Özel grafit kalemlerle doku ve derinlik katmanları işlenir.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 rounded-full border border-outline-variant flex items-center justify-center mx-auto mb-8 text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">package_2</span>
+</div>
+<h3 class="font-headline text-xl mb-4">Özel Teslimat</h3>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed">Eseriniz koruyucu vernikle sabitlenir ve şık kutusunda gönderilir.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-32 bg-background">
+<div class="container mx-auto px-12">
+<div class="max-w-3xl mb-20">
+<h2 class="text-4xl font-headline mb-6">Boyutlar ve Seçenekler</h2>
+<p class="text-on-surface-variant italic">Mekanınıza ve bütçenize en uygun seçeneği belirleyin.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Standard -->
+<div class="bg-surface-container-high p-10 rounded-lg flex flex-col h-full border border-transparent hover:border-outline-variant transition-all">
+<div class="mb-8">
+<span class="font-label text-xs tracking-widest text-on-surface-variant uppercase">Standart</span>
+<h3 class="text-3xl font-headline mt-2 mb-4">A4 Boyut</h3>
+<p class="text-on-surface-variant text-sm">Bireysel portreler ve masaüstü sergileme için ideal.</p>
+</div>
+<div class="text-4xl font-headline mb-8">950 <span class="text-sm font-label text-on-surface-variant">TL</span></div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check</span> Tek Kişilik Çizim
+                            </li>
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check</span> 21x29.7 cm
+                            </li>
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check</span> 150gr Fine Art Kağıt
+                            </li>
+</ul>
+<button class="w-full py-4 border border-outline-variant hover:bg-on-surface hover:text-surface transition-all font-label text-sm tracking-widest">SEÇİN</button>
+</div>
+<!-- Medium -->
+<div class="bg-surface-bright p-10 rounded-lg flex flex-col h-full transform scale-105 z-10 shadow-2xl">
+<div class="mb-8">
+<div class="bg-primary text-on-primary text-[10px] font-label px-2 py-1 inline-block mb-4 tracking-tighter">EN POPÜLER</div>
+<h3 class="text-3xl font-headline mt-2 mb-4">A3 Boyut</h3>
+<p class="text-on-surface-variant text-sm">Daha fazla detay ve ikili portreler için mükemmel denge.</p>
+</div>
+<div class="text-4xl font-headline mb-8">1.850 <span class="text-sm font-label text-on-surface-variant">TL</span></div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check</span> 1-2 Kişilik Çizim
+                            </li>
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check</span> 29.7x42 cm
+                            </li>
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check</span> 220gr Bristol Kağıt
+                            </li>
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check</span> Ekspres Teslimat
+                            </li>
+</ul>
+<button class="w-full py-4 bg-primary text-on-primary hover:bg-primary-dim transition-all font-label text-sm tracking-widest">SEÇİN</button>
+</div>
+<!-- Large -->
+<div class="bg-surface-container-high p-10 rounded-lg flex flex-col h-full border border-transparent hover:border-outline-variant transition-all">
+<div class="mb-8">
+<span class="font-label text-xs tracking-widest text-on-surface-variant uppercase">Görkemli</span>
+<h3 class="text-3xl font-headline mt-2 mb-4">50x70 Boyut</h3>
+<p class="text-on-surface-variant text-sm">Duvarlarınızda galeri etkisi yaratacak büyük ölçekli eserler.</p>
+</div>
+<div class="text-4xl font-headline mb-8">3.400 <span class="text-sm font-label text-on-surface-variant">TL</span></div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check</span> Aile Portreleri (3+ Kişi)
+                            </li>
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check</span> 50x70 cm
+                            </li>
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check</span> Fabriano Sanat Kağıdı
+                            </li>
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check</span> Ücretsiz Çerçeveleme
+                            </li>
+</ul>
+<button class="w-full py-4 border border-outline-variant hover:bg-on-surface hover:text-surface transition-all font-label text-sm tracking-widest">SEÇİN</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Quote Form -->
+<section class="py-32 relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-low -z-10"></div>
+<div class="container mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div>
+<h2 class="text-5xl font-headline mb-8 leading-tight">Projenizi <br/><span class="italic">Konuşalım.</span></h2>
+<p class="text-on-surface-variant mb-12 leading-loose">Özel istekleriniz, farklı boyut tercihleri veya toplu siparişleriniz için hızlıca fiyat teklifi alabilirsiniz. Sanatçımız sizinle en kısa sürede iletişime geçecektir.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed-dim">mail</span>
+<span class="font-label text-sm">studio@obsidiangallery.com</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed-dim">location_on</span>
+<span class="font-label text-sm">Galata Sanat Sokağı, No: 12, İstanbul</span>
+</div>
+</div>
+</div>
+<div class="bg-background/40 backdrop-blur-md p-12 rounded-lg border border-white/5">
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-6">
+<div>
+<label class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Ad Soyad</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary/40 rounded text-on-surface py-3 px-4 font-label text-sm" type="text"/>
+</div>
+<div>
+<label class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">E-Posta</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary/40 rounded text-on-surface py-3 px-4 font-label text-sm" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Tercih Edilen Boyut</label>
+<select class="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary/40 rounded text-on-surface py-3 px-4 font-label text-sm appearance-none">
+<option>A4 (Küçük)</option>
+<option>A3 (Orta)</option>
+<option>50x70 (Büyük)</option>
+<option>Özel Ölçü</option>
+</select>
+</div>
+<div>
+<label class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Notlarınız</label>
+<textarea class="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary/40 rounded text-on-surface py-3 px-4 font-label text-sm resize-none" rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-label text-sm tracking-widest hover:bg-primary-dim transition-all">TEKLİF ALIN</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0d] w-full border-t border-[#e7e5e1]/5">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-12 py-16 max-w-7xl mx-auto items-start">
+<div class="flex flex-col gap-4">
+<div class="font-['Newsreader'] text-xl text-[#e7e5e1]">Obsidian Gallery</div>
+<p class="font-['Newsreader'] text-sm leading-relaxed text-[#c6c7c1]">Grafitin sessiz gücüyle hikayelerinizi resmediyoruz. Her çizgi bir duygu, her gölge bir anıdır.</p>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label text-[10px] uppercase tracking-[0.3em] text-[#e7e5e1]/40">Hızlı Bağlantılar</h4>
+<div class="flex flex-col gap-3">
+<a class="font-['Newsreader'] text-sm leading-relaxed text-[#e7e5e1]/40 hover:text-[#e7e5e1] underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#">Studio Location</a>
+<a class="font-['Newsreader'] text-sm leading-relaxed text-[#e7e5e1]/40 hover:text-[#e7e5e1] underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#">Instagram</a>
+<a class="font-['Newsreader'] text-sm leading-relaxed text-[#e7e5e1]/40 hover:text-[#e7e5e1] underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#">Vimeo</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label text-[10px] uppercase tracking-[0.3em] text-[#e7e5e1]/40">Hukuki</h4>
+<div class="flex flex-col gap-3">
+<a class="font-['Newsreader'] text-sm leading-relaxed text-[#e7e5e1]/40 hover:text-[#e7e5e1] underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-['Newsreader'] text-sm leading-relaxed text-[#e7e5e1]/40 hover:text-[#e7e5e1] underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-white/5 text-center">
+<p class="font-['Newsreader'] text-sm leading-relaxed text-[#e7e5e1]/40">© 2024 Obsidian Gallery. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

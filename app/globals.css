@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-display: #f2f0eb;
+  --text-body: #e7e5e1;
+  /* StickyFooterBar görünürken main/footer alt boşluğu (JS ile güncellenir) */
+  --sticky-bar-offset: 0px;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text-display);
+}
+
+.font-display-italic {
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: -0.02em;
+}
+
+.font-lead {
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  line-height: 1.55;
+  color: var(--text-body);
+}
+
+.font-section-title {
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--text-display);
+}
+
+.font-body-strong {
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-weight: 500;
+  line-height: 1.65;
+  color: rgba(231, 229, 225, 0.92);
+}
+
+/* Logo: KARAKALEM / ÇİZGİ … ÖTESİ / PORTRE — açık renk, invert yok */
+.logo-image {
+  display: block;
+  width: auto;
+  height: 3.5rem;
+  max-width: min(72vw, 14rem);
+  aspect-ratio: 260 / 200;
+  object-fit: contain;
+  object-position: left center;
+}
+
+@media (min-width: 768px) {
+  .logo-image {
+    height: 4rem;
+    max-width: 15rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo-image {
+    height: 4.25rem;
+    max-width: 16rem;
+  }
+}
+
+.footer-logo-image {
+  display: block;
+  width: auto;
+  height: 4.25rem;
+  max-width: min(85vw, 16rem);
+  aspect-ratio: 260 / 200;
+  object-fit: contain;
+  object-position: left center;
+}
+
+@media (min-width: 768px) {
+  .footer-logo-image {
+    height: 5rem;
+    max-width: 17rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-logo-image {
+    height: 5.25rem;
+    max-width: 18rem;
+  }
+}
+
+/* Galeri filtre sekmeleri */
+.gallery-tab:focus-visible {
+  outline: 2px solid rgba(198, 199, 193, 0.35);
+  outline-offset: 2px;
+  border-radius: 9999px;
+}
+
+.gallery-tab {
+  transition:
+    background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.35s ease,
+    box-shadow 0.45s ease,
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    filter 0.3s ease;
+}
+
+.gallery-tab[aria-selected="true"] {
+  background: linear-gradient(
+    180deg,
+    rgba(198, 199, 193, 0.18) 0%,
+    rgba(198, 199, 193, 0.08) 100%
+  );
+  color: #f2f0eb;
+  box-shadow:
+    inset 0 0 0 1px rgba(72, 72, 69, 0.45),
+    0 4px 20px -6px rgba(231, 229, 225, 0.12);
+  transform: scale(1.03);
+}
+
+.gallery-tab[aria-selected="false"] {
+  color: rgba(231, 229, 225, 0.55);
+  transform: scale(1);
+}
+
+.gallery-tab[aria-selected="false"]:hover {
+  transform: scale(1.02);
+  color: rgba(231, 229, 225, 0.85);
+}
+
+/* Tıklanınca kısa parlama — transform ile çakışmaz */
+.gallery-tab.is-pulse {
+  animation: gallery-tab-shine 0.55s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes gallery-tab-shine {
+  0% {
+    filter: brightness(1);
+    box-shadow:
+      inset 0 0 0 1px rgba(72, 72, 69, 0.35),
+      0 0 0 0 rgba(198, 199, 193, 0);
+  }
+  40% {
+    filter: brightness(1.15);
+    box-shadow:
+      inset 0 0 0 1px rgba(198, 199, 193, 0.45),
+      0 0 24px -4px rgba(231, 229, 225, 0.2);
+  }
+  100% {
+    filter: brightness(1);
+    box-shadow:
+      inset 0 0 0 1px rgba(72, 72, 69, 0.45),
+      0 4px 20px -6px rgba(231, 229, 225, 0.12);
+  }
+}
+
+.gallery-tab[aria-selected="false"].is-pulse {
+  animation: gallery-tab-shine-soft 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes gallery-tab-shine-soft {
+  0% {
+    filter: brightness(1);
+  }
+  45% {
+    filter: brightness(1.12);
+    box-shadow: 0 0 18px -6px rgba(198, 199, 193, 0.25);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes gallery-grid-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-grid-animated {
+  animation: gallery-grid-enter 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes gallery-hero-enter {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.gallery-hero-animate {
+  animation: gallery-hero-enter 0.65s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}

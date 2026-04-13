@@ -1,0 +1,81 @@
+﻿{
+    "categories":  [
+                       {
+                           "images":  [
+                                          "/images/karakalem/12-web_edited.jpg",
+                                          "/images/karakalem/1672580515949.jpg",
+                                          "/images/karakalem/1672580515966.jpg",
+                                          "/images/karakalem/1672580515983.jpg",
+                                          "/images/karakalem/1672580516006.jpg",
+                                          "/images/karakalem/1672580516023.jpg",
+                                          "/images/karakalem/1672580516086.jpg",
+                                          "/images/karakalem/1672580516135.jpg",
+                                          "/images/karakalem/1672580516166.jpg",
+                                          "/images/karakalem/1672580516219.jpg",
+                                          "/images/karakalem/1672580516256.jpg",
+                                          "/images/karakalem/20220117_130516.jpg",
+                                          "/images/karakalem/20220201_075240.jpg",
+                                          "/images/karakalem/20220509_042803.jpg",
+                                          "/images/karakalem/489327402_2887598418088491_2080466160137668835_n.jpg",
+                                          "/images/karakalem/8e0eb27f-web_edited.jpg",
+                                          "/images/karakalem/980x2055-web2.jpg",
+                                          "/images/karakalem/IMG_20250927_150835.jpg"
+                                      ],
+                           "title":  "Karakalem",
+                           "id":  "karakalem"
+                       },
+                       {
+                           "images":  [
+                                          "/images/kuru-fircalama/1672580515845.jpg",
+                                          "/images/kuru-fircalama/1672580516175.jpg",
+                                          "/images/kuru-fircalama/20140608_155157.jpg",
+                                          "/images/kuru-fircalama/20160516_201330.jpg",
+                                          "/images/kuru-fircalama/20211222_164241.jpg",
+                                          "/images/kuru-fircalama/20211223_051551_edited.jpg",
+                                          "/images/kuru-fircalama/20220208_074232.jpg",
+                                          "/images/kuru-fircalama/20220211_141523.jpg",
+                                          "/images/kuru-fircalama/20220220_172701.jpg",
+                                          "/images/kuru-fircalama/20220324_114110.jpg",
+                                          "/images/kuru-fircalama/490018528_2887598414755158_6660826146539432982_n.jpg",
+                                          "/images/kuru-fircalama/490101435_2887598294755170_5668440930149424551_n.jpg",
+                                          "/images/kuru-fircalama/IMG_20251001_102336.jpg"
+                                      ],
+                           "title":  "Kuru Fırçalama",
+                           "id":  "kuru-fircalama"
+                       },
+                       {
+                           "images":  [
+                                          "/images/kuru-pastel/468062514_10161987172274169_4090211401627803439_n.jpg",
+                                          "/images/kuru-pastel/468088819_10161987172284169_7187600645923235104_n.jpg",
+                                          "/images/kuru-pastel/506635912_10162830759119169_2897293089747284573_n.jpg",
+                                          "/images/kuru-pastel/IMG_20230206_123135_1.jpg",
+                                          "/images/kuru-pastel/IMG_20230825_142009.jpg",
+                                          "/images/kuru-pastel/kuru-4-web-1.jpg",
+                                          "/images/kuru-pastel/kuru-4-web-2.jpg",
+                                          "/images/kuru-pastel/kuru-4-web-5.jpg",
+                                          "/images/kuru-pastel/kuru-4-web-6.jpg"
+                                      ],
+                           "title":  "Kuru Pastel",
+                           "id":  "kuru-pastel"
+                       },
+                       {
+                           "images":  [
+                                          "/images/yagli-boya/20211127_140303.jpg",
+                                          "/images/yagli-boya/IMG_20230719_083417.jpg",
+                                          "/images/yagli-boya/IMG_20231121_093409.jpg",
+                                          "/images/yagli-boya/IMG_20240404_125107.jpg",
+                                          "/images/yagli-boya/yagli-4-web-1.jpg",
+                                          "/images/yagli-boya/yagli-4-web-2.jpg",
+                                          "/images/yagli-boya/yagli-4-web-3.jpg",
+                                          "/images/yagli-boya/yagli-4-web-4.jpg",
+                                          "/images/yagli-boya/yagli-4-web-5.jpg",
+                                          "/images/yagli-boya/yagli-4-web-6.jpg",
+                                          "/images/yagli-boya/yagli-4-web-7.jpg",
+                                          "/images/yagli-boya/yagli-4-web-8.jpg",
+                                          "/images/yagli-boya/yagli-4-web-9.jpg"
+                                      ],
+                           "title":  "Yağlı Boya",
+                           "id":  "yagli-boya"
+                       }
+                   ]
+}
