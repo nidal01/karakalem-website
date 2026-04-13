@@ -71,7 +71,7 @@ export function StickyFooterBar() {
       role="complementary"
       aria-label="Hızlı iletişim"
       aria-hidden={!visible}
-      className={`fixed bottom-0 left-0 right-0 z-[100] overflow-hidden rounded-t-[1.75rem] border-t border-white/[0.12] bg-[#0e0e0d]/82 pb-[env(safe-area-inset-bottom,0px)] shadow-[0_-12px_48px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.09)] backdrop-blur-[28px] backdrop-saturate-[1.65] transition-[transform,opacity] duration-[450ms] ease-[cubic-bezier(0.22,1,0.36,1)] supports-[backdrop-filter]:bg-[#0e0e0d]/52 md:mx-auto md:mb-3 md:max-w-4xl md:rounded-[2rem] md:border md:border-white/[0.1] md:shadow-[0_24px_80px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.1)] ${
+      className={`fixed bottom-0 left-0 right-0 z-[100] overflow-hidden rounded-t-[1.75rem] border-t border-white/[0.12] bg-background/82 pb-[env(safe-area-inset-bottom,0px)] shadow-[0_-12px_48px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-[28px] backdrop-saturate-[1.65] transition-[transform,opacity] duration-[450ms] ease-[cubic-bezier(0.22,1,0.36,1)] supports-[backdrop-filter]:bg-background/52 md:mx-auto md:mb-3 md:max-w-4xl md:rounded-[2rem] md:border md:border-white/[0.1] md:shadow-[0_24px_80px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.12)] ${
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-full opacity-0"
       }`}
     >

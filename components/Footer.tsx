@@ -14,7 +14,7 @@ const linkClassName =
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-[#0e0e0d] pb-[calc(1rem+var(--sticky-bar-offset,0px))] md:pb-[calc(1.25rem+var(--sticky-bar-offset,0px))]">
+    <footer className="border-t border-white/5 bg-background pb-[calc(1rem+var(--sticky-bar-offset,0px))] md:pb-[calc(1.25rem+var(--sticky-bar-offset,0px))]">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-12 text-center sm:px-6 md:grid-cols-2 md:px-12 md:py-14 md:text-left lg:grid-cols-4">
         <div className="md:col-span-2 lg:col-span-1">
           <Image
