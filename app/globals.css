@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --text-display: #f4f2ed;
-  --text-body: #ebe9e4;
+  --text-display: #f6f4ef;
+  --text-body: #f0eeea;
   /* StickyFooterBar görünürken main/footer alt boşluğu (JS ile güncellenir) */
   --sticky-bar-offset: 0px;
   /*
@@ -77,7 +77,7 @@ html {
   font-family: var(--font-newsreader), Georgia, serif;
   font-weight: 500;
   line-height: 1.65;
-  color: rgba(235, 233, 228, 0.94);
+  color: rgba(240, 238, 234, 0.95);
 }
 
 /* Logo: KARAKALEM / ÇİZGİ … ÖTESİ / PORTRE — açık renk, invert yok */
